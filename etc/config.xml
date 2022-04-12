@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <abandoned_cart>
+            <settings>
+                <enabled_1>1</enabled_1>
+                <email_tmpl_1>abandoned_cart_settings_email_tmpl_1</email_tmpl_1>
+                <email_tmpl_2>abandoned_cart_settings_email_tmpl_2</email_tmpl_2>
+                <email_tmpl_3>abandoned_cart_settings_email_tmpl_3</email_tmpl_3>
+            </settings>
+        </abandoned_cart>
+    </default>
+</config>

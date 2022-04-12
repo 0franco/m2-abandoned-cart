@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+
+    <system>
+        <section id="abandoned_cart" translate="label" sortOrder="50"
+                 showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Abandoned Cart</label>
+            <tab>oh_core</tab>
+            <resource>OH_AbandonedCart::settings</resource>
+            <group id="settings" translate="label"
+                   showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Settings</label>
+                <field id="enabled_1" translate="label comment" type="select"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable</label>
+                    <comment>Enable abandoned cart reminder</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="email_tmpl_1" translate="label" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>First email tmpl to sent to the customer</label>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+                    <depends>
+                        <field id="enabled_1">1</field>
+                    </depends>
+                </field>
+                <field id="enabled_2" translate="label comment" type="select"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable second email</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enabled_1">1</field>
+                    </depends>
+                </field>
+                <field id="email_tmpl_2" translate="label" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Second email tmpl to sent to the customer</label>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+                    <depends>
+                        <field id="enabled_1">1</field>
+                        <field id="enabled_2">1</field>
+                    </depends>
+                </field>
+                <field id="enabled_3" translate="label comment" type="select"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable third email</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enabled_1">1</field>
+                        <field id="enabled_2">1</field>
+                    </depends>
+                </field>
+                <field id="email_tmpl_3" translate="label" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Third email tmpl to sent to the customer</label>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+                    <depends>
+                        <field id="enabled_1">1</field>
+                        <field id="enabled_2">1</field>
+                        <field id="enabled_3">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

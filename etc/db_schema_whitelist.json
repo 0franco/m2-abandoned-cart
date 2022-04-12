@@ -1,0 +1,21 @@
+{
+    "oh_abandoned_cart": {
+        "column": {
+            "id": true,
+            "customer_email": true,
+            "quote_id": true,
+            "data": true,
+            "created_at": true,
+            "updated_at": true,
+            "cart_data": true,
+            "status": true
+        },
+        "index": {
+            "OH_ABANDONED_CART_ID": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "OH_ABANDONED_CART_QUOTE_ID": true
+        }
+    }
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Email:etc/email_templates.xsd">
+    <template id="abandoned_cart_settings_email_tmpl_1"
+              label="OH_AbandonedCart - First email"
+              file="ac_first.html"
+              type="html"
+              module="OH_AbandonedCart"
+              area="frontend"/>
+
+    <template id="abandoned_cart_settings_email_tmpl_2"
+              label="OH_AbandonedCart - Second email"
+              file="ac_second.html"
+              type="html"
+              module="OH_AbandonedCart"
+              area="frontend"
+    />
+
+    <template id="abandoned_cart_settings_email_tmpl_3"
+              label="OH_AbandonedCart - Thrid email"
+              file="ac_third.html"
+              type="html"
+              module="OH_AbandonedCart"
+              area="frontend"
+    />
+</config>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="OH\AbandonedCart\Api\Data\AbandonedCartInterface"
+                type="OH\AbandonedCart\Model\AbandonedCart"/>
+    <preference for="OH\AbandonedCart\Api\Data\AbandonedCartSearchResultInterface"
+                type="OH\AbandonedCart\Model\ACSearchResult"/>
+    <preference for="OH\AbandonedCart\Api\AbandonedCartRepositoryInterface"
+                type="OH\AbandonedCart\Model\AbandonedCartRepository"/>
+
+    <type name="Magento\Quote\Model\Quote">
+        <plugin name="OH_AbandonedCart::save_quote_data" type="OH\AbandonedCart\Plugin\QuotePlugin" disabled="false"/>
+    </type>
+
+    <type name="Magento\Customer\Model\AccountManagement">
+        <plugin name="OH_AbandonedCart::save_guest_email"
+                type="OH\AbandonedCart\Plugin\Customer\AccountManagementPlugin" disabled="false"/>
+    </type>
+
+    <type name="OH\AbandonedCart\Model\AbandonedCart">
+        <arguments>
+            <argument name="resource" xsi:type="object">OH\AbandonedCart\Model\ResourceModel\AbandonedCart</argument>
+        </arguments>
+    </type>
+</config>

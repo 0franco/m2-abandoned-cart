@@ -1,0 +1,21 @@
+{
+    "name": "m2-oh/abandoned-cart",
+    "version": "1.0.0",
+    "description": "OH eCommerce Agency - Abandoned Cart",
+    "type": "magento2-module",
+    "require": {
+        "php": "~7.3.0||~7.4.0",
+        "magento/framework": "*"
+    },
+    "license": [
+        "OSL-3.0"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "OH\\AbandonedCart\\": ""
+        }
+    }
+}
