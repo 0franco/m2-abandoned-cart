@@ -1,6 +1,5 @@
 {
     "name": "m2-oh/abandoned-cart",
-    "version": "1.0.0",
     "description": "OH eCommerce Agency - Abandoned Cart",
     "type": "magento2-module",
     "require": {

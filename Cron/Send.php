@@ -7,6 +7,7 @@ namespace OH\AbandonedCart\Cron;
 use Magento\Framework\Serialize\SerializerInterface;
 use Magento\Quote\Model\ResourceModel\Quote\CollectionFactory;
 use OH\AbandonedCart\Api\Data\AbandonedCartInterface;
+use OH\AbandonedCart\Model\ACartManagement;
 use OH\AbandonedCart\Model\ConfigProvider;
 use OH\AbandonedCart\Model\Notifier;
 use OH\AbandonedCart\Model\ResourceModel\Collection\AbandonedCartFactory;
@@ -39,10 +40,13 @@ class Send
      */
     private Notifier $notifier;
 
-    private $acManagement;
+    /**
+     * @var ACartManagement
+     */
+    private ACartManagement $acManagement;
 
     public function __construct(
-        \OH\AbandonedCart\Model\ACartManagement $acManagement,
+        ACartManagement $acManagement,
         Notifier $notifier,
         CollectionFactory $quoteCollectionFactory,
         AbandonedCartFactory $acCollectionFactory,
